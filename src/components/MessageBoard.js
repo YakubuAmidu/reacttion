@@ -16,6 +16,7 @@ function MessageBoard({ messages }){
                             text
                         }
                      </p>
+                     <hr />
                     </div>
                 )
             })

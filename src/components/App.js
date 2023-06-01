@@ -14,7 +14,7 @@ function App() {
       <hr />
       <PublishMessage dispatch={dispatch}/>
       <hr />
-      <MessageBoard />
+      <MessageBoard messages={state.messages}/>
     </div>
   );
 }

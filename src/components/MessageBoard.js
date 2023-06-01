@@ -9,11 +9,13 @@ function MessageBoard({ messages }){
 
                 return (
                     <div key={id}>
-                        <h4>{new Date(timestamp).toLocalString()}</h4>
+                        <h4>{new Date(timestamp).toLocaleString()}</h4>
                         <hr/>
+                     <p>
                         {
                             text
                         }
+                     </p>
                     </div>
                 )
             })

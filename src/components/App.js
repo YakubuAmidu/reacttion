@@ -16,7 +16,7 @@ const pubsub = new PubSub();
 
 setTimeout(() => {
   pubsub.publish({ type: 'foo', value: 'bar' });
-})
+}, 1000);
 
 function App() {
   const [state, dispatch] = useReducer(reducer, initialState);
@@ -36,7 +36,7 @@ function App() {
   console.log('state', state);
 
   return (
-    <Context.Provider value={{ state, dispatch }}>
+    <Context.Provider value={{ state, dispatch, pubsub }}>
       <h2>Reaction</h2>
       <hr />
       <PublishMessage/>

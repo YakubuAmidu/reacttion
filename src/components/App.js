@@ -9,6 +9,7 @@ import Context from '../context';
 // Imported components
 import PublishMessage from './PublishMessage';
 import MessageBoard from './MessageBoard';
+import '../pubsub';
 
 function App() {
   const [state, dispatch] = useReducer(reducer, initialState);

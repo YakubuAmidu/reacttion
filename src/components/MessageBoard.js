@@ -3,6 +3,8 @@ import React from 'react';
 // Context api
 import { useAppContext } from './hooks';
 
+import CreactReaction from './CreateReaction';
+
 function MessageBoard(){
     const { state: { messages }} = useAppContext();
 
@@ -18,6 +20,7 @@ function MessageBoard(){
                         <hr/>
                      <p>{text}</p>
                      <h4>- {username}</h4>
+                     <CreactReaction />
                      <hr />
                     </div>
                 )

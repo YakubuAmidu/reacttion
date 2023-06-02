@@ -1,7 +1,7 @@
 export const NEW_MESSAGE = 'NEW_MESSAGE';
 export const SET_USERNAME = 'SET_USERNAME';
 
-export const REACT_OBJECTS = [
+export const REACTION_OBJECTS = [
   {
     type: 'REACT_LOVE',
     emoji: '❤️'

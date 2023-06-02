@@ -9,14 +9,11 @@ import Context from '../context';
 // Imported components
 import PublishMessage from './PublishMessage';
 import MessageBoard from './MessageBoard';
+import SetUsername from './SetUsername';
 import PubSub from '../pubsub';
 import '../pubsub';
 
 const pubsub = new PubSub();
-
-setTimeout(() => {
-  pubsub.publish({ type: 'foo', value: 'bar' });
-}, 1000);
 
 function App() {
   const [state, dispatch] = useReducer(reducer, initialState);
@@ -38,6 +35,7 @@ function App() {
   return (
     <Context.Provider value={{ state, dispatch, pubsub }}>
       <h2>Reaction</h2>
+      <SetUsername />
       <hr />
       <PublishMessage/>
       <hr />

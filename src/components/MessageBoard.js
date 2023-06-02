@@ -1,10 +1,10 @@
-import React, { useContext } from 'react';
+import React from 'react';
 
 // Context api
-import Context from '../context';
+import { useAppContext } from './hooks';
 
 function MessageBoard(){
-    const { state: { messages }} = useContext(Context);
+    const { state: { messages }} = useAppContext();
 
   return (
     <div>

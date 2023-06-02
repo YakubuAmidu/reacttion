@@ -1,13 +1,13 @@
-import React, { useState, useContext } from 'react';
+import React, { useState } from 'react';
 
 // Context api
-import Context from '../context';
+import { useAppContext } from './hooks';
 
 // Imported components
 import { newMessage } from '../state/actions';
 
 function PublishMessage(){
-    const { dispatch } = useContext(Context);
+    const { dispatch } = useAppContext();
 
     const [text, setText] = useState('');
 

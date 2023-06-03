@@ -18,7 +18,8 @@ function CreateReaction({ messageId }){
 
                 return (
                 <span 
-                key={type} onClick={publishReaction({ type, emoji })}>
+                key={type} 
+                onClick={publishReaction({ type, emoji })}>
                     {emoji}
                 </span>
                 );

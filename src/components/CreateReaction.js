@@ -3,11 +3,11 @@ import { REACTION_OBJECTS } from '../state/types';
 import { useAppContext } from './hooks';
 import { createReaction } from '../state/actions';
 
-function CreateReaction(){
+function CreateReaction({ messageId }){
     const { state: { username }, pubsub: { publish }} = useAppContext();
 
-    const publishReaction = ({ type, emoji, pubsub: { publish }}) => {
-        publish(createReaction({ type, emoji, username }));
+    const publishReaction = ({ type, emoji }) => () => {
+        publish(createReaction({ type, emoji, username, messageId }));
     }
 
     return (
@@ -17,7 +17,10 @@ function CreateReaction(){
                 const { type, emoji } = REACTION_OBJECT;
 
                 return (
-                <span key={type}>{emoji}</span>
+                <span 
+                key={type} onClick={publishReaction({ type, emoji })}>
+                    {emoji}
+                </span>
                 );
                })
             }

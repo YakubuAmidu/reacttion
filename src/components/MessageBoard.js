@@ -20,7 +20,7 @@ function MessageBoard(){
                         <hr/>
                      <p>{text}</p>
                      <h4>- {username}</h4>
-                     <CreateReaction />
+                     <CreateReaction messageId={id}/>
                      <hr />
                     </div>
                 )

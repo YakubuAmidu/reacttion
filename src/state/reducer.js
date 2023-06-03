@@ -3,12 +3,12 @@ import { NEW_MESSAGE, SET_USERNAME, REACTION_OBJECTS } from './types';
 export const initialState = { 
     messages: [], 
     username: 'anonymous', 
-    reactionMap: {} 
+    reactionsMap: {} 
 };
 
-const REACTION_TYPES = REACTION_OBJECTS.map(REACTION_OBJECT => {
-    return REACTION_OBJECT.type
-})
+const REACTION_TYPES = REACTION_OBJECTS.map( 
+    REACTION_OBJECT => REACTION_OBJECT.type
+)
 
 const reducer = (state, action) => {
     if(REACTION_TYPES.includes(action.type)){
@@ -19,7 +19,7 @@ const reducer = (state, action) => {
         if(messageReactions){
             reactionsMap = {
                 ...state.reactionsMap,
-                [messageId]: [action.item]
+                [messageId]: [...messageReactions, action.item]
             }
         } else {
           reactionsMap = {

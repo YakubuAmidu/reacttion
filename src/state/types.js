@@ -3,19 +3,19 @@ export const SET_USERNAME = 'SET_USERNAME';
 
 export const REACTION_OBJECTS = [
   {
-    type: 'REACT_LOVE',
+    type: 'REACTION_LOVE',
     emoji: '❤️'
   },
   {
-    type: 'REACT_LIKE',
+    type: 'REACTION_LIKE',
     emoji: '👍'
   },
   {
-    type: 'REACT_DISLIKE',
+    type: 'REACTION_DISLIKE',
     emoji: '👎'
   },
   {
-    type: 'REACT_LAUGH',
+    type: 'REACTION_LAUGH',
     emoji: '🤣'
   }
 ]

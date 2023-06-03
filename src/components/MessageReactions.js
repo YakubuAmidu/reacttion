@@ -9,7 +9,7 @@ function MessageReactions({ messageReactions }){
 
         return (
             <span key={id}>
-              <em>{username}: </em>
+              <em>{username}:  </em>
               { emoji }
             </span>
         )
